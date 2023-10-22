@@ -1,13 +1,13 @@
 import cv2
 import numpy as np
-image = cv2.imread(r"C:\Users\darre\OneDrive\Pictures\Screenshots\Screenshot 2023-10-19 140025.png") #just put in the file path
+image = cv2.imread(r"C:\Users\darre\OneDrive\Pictures\Screenshots\Screenshot 2023-10-19 160223.png") #just put in the file path
 output = image.copy()
 cv2.imshow("input", image)
 cv2.waitKey()
 cv2.destroyAllWindows()
 img = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
 # Find circles
-arr = cv2.HoughCircles(img, cv2.HOUGH_GRADIENT, 1.3, 5, 0, 300, 14, 0, 10) #Or your to cautious in your pickup of circles
+arr = cv2.HoughCircles(img, cv2.HOUGH_GRADIENT, 1.3, 3, 0, 300, 13, 0, 10) #Or your to cautious in your pickup of circles
 # If some circle is found
 circles = arr[0]  
 count = 0
